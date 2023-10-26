@@ -13,13 +13,25 @@
   <div class="success">
     <img src="assets/images/icon-success.svg" alt="">
     <h1>Thanks for <br>subscribing</h1>
-    <p> </p>
-    <button onclick="dismissMessage()">Dismiss Message</button>
+    <p>  A confirmation email has been sent to 
+      <p id="Em_output"></p>
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button id="btn" onclick="dismissMessage()">Dismiss Message</button>
   </div>
-  <script>
+  <script >
+    const email_input=document.getElementById('input');
+
+
     function dismissMessage() {
+      const emailVar=document.getElementById('Em_output');
+      emailVar.innerText =email_input.value; 
+      console.log("this email output",emailVar);
       window.location.href = 'index.html';
+
+      
     }
+
   </script>
 </body>
 </html>
